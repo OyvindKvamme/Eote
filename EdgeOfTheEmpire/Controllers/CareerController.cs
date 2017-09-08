@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
+using System.Web.Mvc;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using EdgeOfTheEmpire.DTOs;
@@ -15,6 +16,8 @@ using EdgeOfTheEmpire.Models;
 
 namespace EdgeOfTheEmpire.Controllers
 {
+    
+    [System.Web.Http.Authorize]
     public class CareerController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
